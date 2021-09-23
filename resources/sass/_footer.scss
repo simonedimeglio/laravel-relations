@@ -1,0 +1,20 @@
+footer {
+    .container {
+        .footer-txt {
+            padding-top: 30px;
+            text-align: center;
+            color: #ffff;
+            .heart {
+                color: #e2be1d;
+            }
+            a {
+                color: #e2be1d;;
+                &:hover {
+                    color: #ffd100;
+                    text-decoration: line-through;
+                    cursor: cell;
+                }
+            }
+        }
+    }
+}

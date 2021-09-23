@@ -1,0 +1,34 @@
+header {
+    nav {
+        .container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            color: #ffff;
+            .left-nav {
+                ul {
+                    list-style: none;
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        padding-right: 15px;
+                        &:last-child {
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+            .center-nav {
+                color: #e2be1d;
+
+            }
+            .right-nav {
+
+            }
+        }
+    }
+}
+
+

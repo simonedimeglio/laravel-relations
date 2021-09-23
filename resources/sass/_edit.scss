@@ -1,0 +1,35 @@
+main {
+    .article-edit-container {
+        display: flex;
+        padding: 30px 0;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        border: 5px solid white;
+    }
+    form {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        label {
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 0 20px 10px 20px;
+            margin: 5px 0 10px 0;
+            background-color: #202020;
+            border: none;
+            border-bottom: 1px solid white;
+            color: #e2be1d;
+        }
+        .submit-button {
+            padding: 10px;
+            margin-top: 20px;
+            border: 1px solid #ffff;
+            background-color: #333533;
+            color: #ffd100;
+        }
+    }
+}

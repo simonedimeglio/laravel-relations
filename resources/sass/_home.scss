@@ -1,0 +1,20 @@
+a {
+    text-decoration: none;
+    color: #ffff;
+    &:hover {
+        color: #ffd100;
+        text-decoration: line-through;
+    }
+}
+main {
+    .home-container {
+        display: flex;
+        height: 70vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border: 5px solid white;
+        text-align: center;
+    }
+}
