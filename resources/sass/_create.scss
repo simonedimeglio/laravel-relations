@@ -26,11 +26,45 @@ main {
             color: #e2be1d;
         }
         .custom-select {
-            border: none;
-            border-color: transparent transparent #fff transparent;
+            border: 1px solid lightgray;
             margin-top: 20px;
             color: #e2be1d;
             background-color: #202020;
+        }
+        .tags-checkbox {
+            .tags-checkbox-title {
+                width: 100px;
+                margin: 25px auto 0 auto;
+                padding: 10px;
+                background-color: #333533;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                i {
+                    color: #e2be1d;
+                }
+                h5 {
+                    margin: 0 5px;
+                }
+            }
+            .tag-line {
+                display: flex;
+                flex-wrap: wrap;
+                .tag-check {
+                    margin: 20px auto;
+                    min-width: 200px;
+                    padding: 5px 10px;
+                    border: 1px solid gray;
+                    input {
+                        width: 15px;
+                        margin-right: 0;
+                    }
+                    label {
+                        font-size: 12px;
+                    }
+                }
+            }
         }
         .submit-button {
             padding: 10px;

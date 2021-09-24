@@ -34,6 +34,22 @@
             <label for="name">DATE</label>
             <input type="date" name="date" id="date" placeholder="{{ $article->date }}">
 
+            <div class="tags-checkbox">
+                <div class="tags-checkbox-title">
+                    <i class="fas fa-tag"></i>
+                    <h5>TAGS</h5>
+                </div>
+
+                <div class="tag-line">
+                    @foreach ($tags as $tag)
+                    <div class="tag-check">
+                        <input name="tags[]" type="checkbox" value="{{ $tag->id }}">
+                        <label>{{ $tag->tag_name }}</label>
+                    </div>
+                @endforeach
+                </div>
+            </div>
+
             <input class="submit-button" type="submit" value="Submit">
 
 

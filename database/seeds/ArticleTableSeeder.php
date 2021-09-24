@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Article;
 use App\Author;
+use App\Tag;
 use Faker\Generator as Faker;
 
 class ArticleTableSeeder extends Seeder
@@ -14,7 +15,26 @@ class ArticleTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+        $tagsList = [
+            'NEWS',
+            'REVIEW',
+            'HOW-TO',
+            'SPORT',
+            'TECH - GEEK',
+            'ART - CULTURE',
+            'MUSIC - CINEMA',
+            'SCIENCE',
+            'VARIOUS'
+        ];
 
+        $listOftagsID = [];
+
+        foreach($tagsList as $tag) {
+            $tagObj = new Tag();
+            $tagObj->tag_name = $tag;
+            $tagObj->save();
+            $listOftagsID[] = $tagObj->id;
+        }
         
 
         $listOfAuthorID = [];

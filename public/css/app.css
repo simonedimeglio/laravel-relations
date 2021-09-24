@@ -15707,6 +15707,26 @@ main .article-show-container .upper-line h2 {
   color: #ffd100;
 }
 
+main .article-show-container .tags-container {
+  display: flex;
+}
+
+main .article-show-container .tags-container .tag {
+  margin: 0 10px 10px 10px;
+  padding: 5px;
+  background-color: #333533;
+  display: flex;
+  align-items: center;
+}
+
+main .article-show-container .tags-container .tag i {
+  color: #e2be1d;
+}
+
+main .article-show-container .tags-container .tag h5 {
+  margin: 0 5px;
+}
+
 main .article-show-container h6 {
   margin-top: 5px;
   color: #ffd100;
@@ -15767,6 +15787,46 @@ main form input {
   color: #e2be1d;
 }
 
+main form .tags-checkbox .tags-checkbox-title {
+  width: 100px;
+  margin: 25px auto 0 auto;
+  padding: 10px;
+  background-color: #333533;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main form .tags-checkbox .tags-checkbox-title i {
+  color: #e2be1d;
+}
+
+main form .tags-checkbox .tags-checkbox-title h5 {
+  margin: 0 5px;
+}
+
+main form .tags-checkbox .tag-line {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main form .tags-checkbox .tag-line .tag-check {
+  margin: 20px auto;
+  min-width: 200px;
+  padding: 5px 10px;
+  border: 1px solid gray;
+}
+
+main form .tags-checkbox .tag-line .tag-check input {
+  width: 15px;
+  margin-right: 0;
+}
+
+main form .tags-checkbox .tag-line .tag-check label {
+  font-size: 12px;
+}
+
 main form .submit-button {
   padding: 10px;
   margin-top: 20px;
@@ -15807,11 +15867,50 @@ main form input {
 }
 
 main form .custom-select {
-  border: none;
-  border-color: transparent transparent #fff transparent;
+  border: 1px solid lightgray;
   margin-top: 20px;
   color: #e2be1d;
   background-color: #202020;
+}
+
+main form .tags-checkbox .tags-checkbox-title {
+  width: 100px;
+  margin: 25px auto 0 auto;
+  padding: 10px;
+  background-color: #333533;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main form .tags-checkbox .tags-checkbox-title i {
+  color: #e2be1d;
+}
+
+main form .tags-checkbox .tags-checkbox-title h5 {
+  margin: 0 5px;
+}
+
+main form .tags-checkbox .tag-line {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main form .tags-checkbox .tag-line .tag-check {
+  margin: 20px auto;
+  min-width: 200px;
+  padding: 5px 10px;
+  border: 1px solid gray;
+}
+
+main form .tags-checkbox .tag-line .tag-check input {
+  width: 15px;
+  margin-right: 0;
+}
+
+main form .tags-checkbox .tag-line .tag-check label {
+  font-size: 12px;
 }
 
 main form .submit-button {

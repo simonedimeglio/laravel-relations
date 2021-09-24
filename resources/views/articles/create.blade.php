@@ -37,16 +37,30 @@
             <select class="custom-select" id="author_id" name="author_id">
                 <option value="" disabled selected>Who is writing? Select the signature!</option>
                 @foreach ($authors as $author)
-                    <option value="{{$author->id}}">
-                        {{ $author->name }} 
-                        {{-- TO FIX --}}
+                    <option value="{{ $author->id }}">
+                        {{ $author->name }}
                     </option>
                 @endforeach
             </select>
+
+            <div class="tags-checkbox">
+                <div class="tags-checkbox-title">
+                    <i class="fas fa-tag"></i>
+                    <h5>TAGS</h5>
+                </div>
+
+                <div class="tag-line">
+                    @foreach ($tags as $tag)
+                    <div class="tag-check">
+                        <input name="tags[]" type="checkbox" value="{{ $tag->id }}">
+                        <label>{{ $tag->tag_name }}</label>
+                    </div>
+                @endforeach
+                </div>
+            </div>
+
 
             <input class="submit-button" type="submit" value="Submit">
     </div>
 
 @endsection
-
-
