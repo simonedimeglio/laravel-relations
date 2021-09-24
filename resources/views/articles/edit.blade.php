@@ -34,6 +34,15 @@
             <label for="name">DATE</label>
             <input type="date" name="date" id="date" placeholder="{{ $article->date }}">
 
+            <select class="custom-select" id="author_id" name="author_id">
+                <option value="" disabled selected>Who is writing? Select the signature!</option>
+                @foreach ($authors as $author)
+                    <option value="{{ $author->id }}">
+                        {{ $author->name }}
+                    </option>
+                @endforeach
+            </select>
+
             <div class="tags-checkbox">
                 <div class="tags-checkbox-title">
                     <i class="fas fa-tag"></i>

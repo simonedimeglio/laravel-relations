@@ -5,6 +5,7 @@ use App\Article;
 use App\Author;
 use App\Tag;
 use Illuminate\Http\Request;
+use Psy\TabCompletion\AutoCompleter;
 
 class ArticleController extends Controller
 {
@@ -69,11 +70,12 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article, Tag $tag)
+    public function edit(Article $article, Tag $tag, Author $author)
     {
         // dd($article);
         $tags = Tag::all();
-        return view('articles.edit', compact('article', 'tags'));
+        $authors = Author::all();
+        return view('articles.edit', compact('article', 'tags', 'authors'));
     }
 
     /**
@@ -106,6 +108,7 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
+        $article->tag()->delete();
         $article->delete();
         return redirect()->route('articles.index');
     }
@@ -122,7 +125,7 @@ class ArticleController extends Controller
         $article->save();
 
         foreach($data['tags'] as $tagId) {
-            $article->tag()->attach($tagId);
+            $article->tag->attach($tagId);
         }
 
     }
