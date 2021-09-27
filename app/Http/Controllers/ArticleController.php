@@ -108,7 +108,7 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        $article->tag()->delete();
+        $article->tag()->detach();
         $article->delete();
         return redirect()->route('articles.index');
     }
@@ -124,9 +124,8 @@ class ArticleController extends Controller
         $article->author_id = $data['author_id'];
         $article->save();
 
-        foreach($data['tags'] as $tagId) {
-            $article->tag->attach($tagId);
-        }
+        $article->tag()->sync($data['tags']);
 
+     
     }
 }
