@@ -1,11 +1,13 @@
 header {
     nav {
+        padding-top: 20px;
         .container-fluid {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 60px;
             color: #ffff;
+            font-size: 20px;
             .left-nav {
                 ul {
                     list-style: none;
@@ -22,10 +24,14 @@ header {
             }
             .center-nav {
                 color: #e2be1d;
-
+                font-size: 48px;
+                font-weight: bold;
             }
             .right-nav {
-
+                &:hover a {
+                    color: lightcoral;
+                    cursor: crosshair;
+                }
             }
         }
     }

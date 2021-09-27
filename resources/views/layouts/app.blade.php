@@ -20,7 +20,7 @@
                             <li><a href="{{ route('articles.index') }}">ARTICLES</a></li>
                         </ul>
                     </div>
-                    <div class="center-nav">CREATIVE PRESS</div>
+                    <div class="center-nav">C<i class="far fa-water"></i>P</div>
                     <div class="right-nav"><a href="/egg">THE CRAFTSMAN BUILDER</a></div>
                 </div>
             </nav>
@@ -37,7 +37,7 @@
                 <div class="footer-txt">
                     <div>#CREATIVEPRESS</div>
                     <div>&race;</div>
-                    <div>Made with <span class="heart">&hearts;</span> by <a href="https://github.com/simonedimeglio">Simone Di Meglio</a>. All rights reserved - #creativepress &copy;</div>
+                    <div>Made with <span class="heart">&hearts;</span> by <a href="https://github.com/simonedimeglio">Simone Di Meglio</a>.<br/> All rights reserved - C <i class="far fa-water"></i> P &copy;</div>
                 </div>
             </div>
         </footer>

@@ -15541,6 +15541,10 @@ a.text-dark:focus {
   }
 }
 
+header nav {
+  padding-top: 20px;
+}
+
 header nav .container-fluid,
 header nav .container-sm,
 header nav .container-md,
@@ -15551,6 +15555,7 @@ header nav .container-xl {
   align-items: center;
   height: 60px;
   color: #ffff;
+  font-size: 20px;
 }
 
 header nav .container-fluid .left-nav ul,
@@ -15586,6 +15591,21 @@ header nav .container-md .center-nav,
 header nav .container-lg .center-nav,
 header nav .container-xl .center-nav {
   color: #e2be1d;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+header nav .container-fluid .right-nav:hover a,
+header nav .container-sm .right-nav:hover a,
+header nav .container-md .right-nav:hover a,
+header nav .container-lg .right-nav:hover a,
+header nav .container-xl .right-nav:hover a {
+  color: lightcoral;
+  cursor: crosshair;
+}
+
+footer .container {
+  padding-bottom: 20px;
 }
 
 footer .container .footer-txt {
@@ -15920,13 +15940,19 @@ main form .submit-button {
   color: #ffd100;
 }
 
-main .article-create-container {
+main .egg-container {
   display: flex;
   padding: 30px 0;
+  margin: 0 auto;
+  width: 45%;
   flex-direction: column;
   align-items: center;
   color: white;
   border: 5px solid white;
   text-align: center;
+}
+
+main .egg-container img {
+  width: 100%;
 }
 
