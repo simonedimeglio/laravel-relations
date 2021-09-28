@@ -17,7 +17,7 @@
             </div>
         @endif
 
-        <form action="{{ route('articles.store') }}" method="post">
+        <form action="{{ route('articles.store') }}" method="post" enctype="multipart/form-data">
             @csrf
 
             {{-- ARTICLE CONTENT --}}
@@ -26,7 +26,7 @@
             <input type="text" name="title" id="title" placeholder="{{ $article->title}}">
 
             <label for="name">PICTURE</label>
-            <input type="text" name="img" id="img" placeholder="{{ $article->img}}">
+            <input type="file" name="img" id="img" placeholder="Picture File">
 
             <label for="name">WORDS</label>
             <input type="text" name="paragraph" id="paragraph" placeholder="{{ $article->paragraph}}">

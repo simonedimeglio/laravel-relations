@@ -26,7 +26,7 @@
                 {{ $article->paragraph }}
             </div>
             <div class="article-img">
-                <img src="{{ $article->img }}" alt="{{ $article->img }}'s picture">
+                <img src="{{ asset('storage/' . $article->img) }}" alt="{{ $article->img }}'s picture">
             </div>
         </div>
 

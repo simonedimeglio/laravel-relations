@@ -5,6 +5,10 @@ use App\Article;
 use App\Author;
 use App\Tag;
 use Illuminate\Http\Request;
+use App\Mail\NewArticleCreated;
+use App\Mail\SendNewMail;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 use Psy\TabCompletion\AutoCompleter;
 
 class ArticleController extends Controller
@@ -42,13 +46,16 @@ class ArticleController extends Controller
     {
         $request->validate([
             'title' => 'required | string',
-            'img' => 'url',
+            'img' => 'required | image',
             'paragraph' => 'required | string',
             'date' => 'required | date',
         ]);
 
         $article = new Article();
         $this->saveItemFromRequest($article, $request);
+
+        // after save -> mail
+        Mail::to('info@test.it')->send(new SendNewMail($article));       
         return redirect()->route('articles.show', $article);
     }
 
@@ -89,7 +96,7 @@ class ArticleController extends Controller
     {
         $request->validate([
             'title' => 'string',
-            'img' => 'url',
+            'img' => 'image',
             'paragraph' => 'string',
             'date' => 'date',
         ]);
@@ -118,7 +125,8 @@ class ArticleController extends Controller
         $data = $request->all(); // data = array
 
         $article->title = $data['title'];
-        $article->img = $data['img'];
+        $picturePath = Storage::put('images', $data['img']);
+        $article->img = $picturePath;
         $article->paragraph = $data['paragraph'];
         $article->date = $data['date'];
         $article->author_id = $data['author_id'];
